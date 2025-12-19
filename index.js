@@ -2,7 +2,7 @@ const express = require("express");
 const ProductRoute = require("./routes/productRoute");
 const dotenv = require("dotenv");
 const connectdb = require("./config/db");
-const cors = require("cors"); // <-- import cors
+const cors = require("cors"); 
 
 dotenv.config();
 connectdb();
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
+
 app.use("/api", ProductRoute);
 
 const PORT = process.env.PORT || 5000;
